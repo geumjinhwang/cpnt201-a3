@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* gradient background */
+body {
+	background: linear-gradient(-60deg, #e316f6, #7936f6, #aaddbe, #ff5c69);
+	background-size: 400% 400%;
+	animation: gradient 11s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* place contents in center */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* heading(pastel vs vivid) */
+h1 {
+  margin: -3rem 0 4rem 0;
+  
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 80px;
+  font-weight: 700;
+  color: rgb(255, 217, 220);
+  text-shadow: 3px 3px rgba(26, 25, 25, 0.787);
+}
+
+/* biggest star */
+.star1 {
+  stroke: rgb(2, 2, 2);
+}
+
+.star1.vivid {
+  fill: rgb(219, 88, 255);
+  stroke: rgb(2, 2, 2);
+}
+
+/* large star */
+.star2.vivid {
+  fill: rgb(255, 119, 142);
+}
+
+/* medium star */
+.star3.vivid {
+  fill: #fee379;
+}
+
+/* smallest star */
+.star4.vivid {
+  fill: #00cdb8;
+  stroke: rgb(255, 255, 255);
+}
+
+/* button with hover and active */
+.button {
+  font-size: 24px;
+  color: black;
+  background-color: rgb(250, 201, 208);
+  
+  margin-top: 2rem;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all .1s;
+}
+
+.button:hover {
+  color: rgb(233, 233, 233);
+  background-color: rgb(107, 0, 230);
+}
+
+.button:active {
+  top: 3px;
+  position: relative;
+}
+
+/* media query for mobile */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 42px;
+  }
+  .star1 {
+    fill: rgb(57, 57, 240);
+  }
+  .star2 {
+    fill: darkorange;
+  }
+  .star3 {
+    fill: rgb(255, 66, 66);
+  }
+  .star4 {
+    fill: rgb(96, 224, 45);
+  }
+}
